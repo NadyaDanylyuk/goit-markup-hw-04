@@ -5,6 +5,7 @@
   --primary-white-color: #ffffff;
   --footer-hero-color: #2f303a;
   --btn-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 .html {
   box-sizing: border-box;
@@ -112,18 +113,20 @@ button:focus {
 .site-nav .link:focus {
   color: #2196f3;
 }
+
 .site-nav {
   margin-left: 90px;
 }
 
 .contacts-list .link {
   color: var(--tittle-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .contacts-list .link:hover,
 .contacts-list .link:focus {
@@ -140,15 +143,24 @@ button:focus {
 .contacts-list .list + .list {
   margin-left: 50px;
 }
+header ul a:hover,
+header ul a:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
 .icon-mail {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .icon-tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero {
@@ -232,6 +244,63 @@ button:focus {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  width: 270px;
+}
+
+.icon-1::before {
+  content: "";
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-image: url(../images/antenna\ 1.svg);
+  background-size: 65px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 30px;
+  border-radius: 4px;
+}
+.icon-2::before {
+  content: "";
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-image: url(../images/clock\ 1.svg);
+  background-size: 67px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 30px;
+  border-radius: 4px;
+}
+.icon-3::before {
+  content: "";
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-image: url(../images/diagram\ 1.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 30px;
+  border-radius: 4px;
+}
+.icon-4::before {
+  content: "";
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-image: url(../images/astronaut\ 1.svg);
+  background-size: 69px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
 }
 .what-we-do {
   padding-bottom: 94px;
@@ -298,6 +367,51 @@ button:focus {
   letter-spacing: 0.03em;
 }
 
+.social-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.social-links-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: var(--primary-white-color);
+}
+
+.social-links-item {
+  display: block;
+  background-color: var(--primary-white-color);
+}
+
+.social-links-item:not(:last-child) {
+  padding-right: 10px;
+}
+
+.social-links-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+.social-links-link:hover .social-links-icon,
+.social-links-link:focus .social-links-icon {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.social-links-link:hover,
+.social-links-link:focus {
+  background-color: var(--accent-color);
+}
 .name {
   font-weight: 500;
   font-size: 16px;
@@ -311,29 +425,66 @@ button:focus {
   line-height: 1.18;
   margin-bottom: 30px;
 }
+.our-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .our-clients-title {
+  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  color: var(--primary-text-color);
+  padding-bottom: 50px;
 }
-.our-clients {
-  padding-bottom: 94px;
-  padding-top: 94px;
-  text-align: center;
+
+.our-clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.our-clients .container {
+
+.our-clients-list-item {
+  display: flex;
+}
+
+.our-clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid var(--icon-color);
+}
+
+.our-clients-list-icon {
+  fill: var(--icon-color);
+}
+
+.our-clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-clients-list-link:hover,
+.our-clients-list-link:focus {
+  border-color: var(--accent-color);
+}
+
+.our-clients-list-link:hover .our-clients-list-icon,
+.our-clients-list-link:focus .our-clients-list-icon {
+  fill: var(--accent-color);
 }
 
 .footer {
   background-color: var(--footer-hero-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  
 }
-/* .footer-list {
-  list-style: none;
-} */
+
 .footer-link {
   display: inline-block;
 }
@@ -371,6 +522,70 @@ button:focus {
 .footer-logo > span {
   color: var(--accent-color);
 }
+.footer-container {
+  display: flex;
+}
+
+.footer-social-links-container {
+  margin-left: 70px;
+}
+
+
+.footer-social-links-title {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.footer-social-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.footer-social-links-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-links-item {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1));
+}
+
+.footer-social-links-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-links-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-white-color);
+}
+
+.footer-social-links-link:hover .footer-social-links-icon,
+.footer-social-links-link:focus .footer-social-links-icon {
+  background-color: var(--accent-color);
+}
+
+.footer-social-links-link:hover,
+.footer-social-links-link:focus { 
+  background-color: var(--accent-color);
+}
+
+
 
 .portfolio {
   padding-top: 94px;
